@@ -1,8 +1,8 @@
-# Use the latest official Apache HTTP Server image
-FROM httpd:latest
+# Use Alpine-based Apache for better security
+FROM httpd:alpine
 
-# Update and install security patches
-RUN apt-get update && apt-get upgrade -y && apt-get clean
+# Update all system packages to fix vulnerabilities
+RUN apk update && apk upgrade && rm -rf /var/cache/apk/*
 
 # Copy website files into the Apache document root
 COPY index.html /usr/local/apache2/htdocs/
@@ -10,5 +10,5 @@ COPY index.html /usr/local/apache2/htdocs/
 # Expose port 80 for HTTP traffic
 EXPOSE 80
 
-# Ensure Apache runs in the foreground (default behavior in httpd image)
+# Start Apache in the foreground
 CMD ["httpd-foreground"]

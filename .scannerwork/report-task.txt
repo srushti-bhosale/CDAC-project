@@ -1,0 +1,6 @@
+projectKey=CDAC-project
+serverUrl=http://localhost:9000
+serverVersion=25.1.0.102122
+dashboardUrl=http://localhost:9000/dashboard?id=CDAC-project
+ceTaskId=85a9bec6-af3f-4e1d-a70d-b3f05ffda925
+ceTaskUrl=http://localhost:9000/api/ce/task?id=85a9bec6-af3f-4e1d-a70d-b3f05ffda925

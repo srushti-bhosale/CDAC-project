@@ -4,11 +4,11 @@ metadata:
   name: webapp-service
   namespace: default
 spec:
-  type: NodePort  # Change from ClusterIP to NodePort
+  type: NodePort 
   selector:
     app: webapp
   ports:
     - protocol: TCP
-      port: 80          # Service port
-      targetPort: 80    # Container's exposed port
-      nodePort: 30008   # Specify a port between 30000-32767
+      port: 80         
+      targetPort: 80    
+      nodePort: 30008  
